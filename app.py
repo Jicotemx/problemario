@@ -15,6 +15,14 @@ import sys
 import subprocess
 import setuptools
 
+
+@app.route('/healthz')
+def health_check():
+    return "OK", 200
+
+
+
+
 @app.route('/check')
 def check():
     return f"""
@@ -241,4 +249,10 @@ def importar_base():
         return f"Error al importar: {str(e)}", 500
 
 if __name__ == '__main__':
-    app.run()
+    try:
+        app.run()
+    except Exception as e:
+        print(f"Error starting app: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        raise
