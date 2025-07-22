@@ -11,6 +11,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import io
 
+import sys
+import subprocess
+
+# Verificar e instalar dependencias faltantes
+try:
+    import matplotlib
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib==3.7.1"])
+
+try:
+    import jinja2
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "jinja2==3.1.2"])
+
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key')
 
