@@ -3,7 +3,7 @@ import json
 import base64
 import requests
 from flask import Flask, render_template, request, redirect, url_for, session, send_file
-from utils import MathProblemManager, PrintOptionsDialog
+from utils import MathProblemManager
 from jinja2 import Environment, FileSystemLoader
 import matplotlib
 matplotlib.use('Agg')
