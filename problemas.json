@@ -1,0 +1,50 @@
+{
+    "Cálculo Diferencial:Derivadas:Polinomios:001": {
+        "enunciado": "Calcula la derivada de $x^3$.",
+        "solucion": "",
+        "respuesta": "$3x^2$",
+        "categoria": "Cálculo Diferencial",
+        "subcategoria": "Derivadas",
+        "tema": "Polinomios"
+    },
+    "Cálculo Diferencial:Derivadas:Trigonométricas:001": {
+        "enunciado": "Derivada de $\\sen(3x)$.",
+        "solucion": "",
+        "respuesta": "$3\\cos(3x)$.",
+        "categoria": "Cálculo Diferencial",
+        "subcategoria": "Derivadas",
+        "tema": "Trigonométricas"
+    },
+    "Cálculo Diferencial:Derivadas:Polinomios:002": {
+        "enunciado": "Deriva $f(x)=1+2x+3x^4$",
+        "solucion": "Usa la fórmula $D(u^n)=nu^{n-1}du$.",
+        "respuesta": "$f'(x)=2+12x^3$",
+        "categoria": "Cálculo Diferencial",
+        "subcategoria": "Derivadas",
+        "tema": "Polinomios"
+    },
+    "Cálculo Diferencial:Derivadas:Trigonométricas:002": {
+        "enunciado": "Deriva $\\cos(4x)$",
+        "solucion": "",
+        "respuesta": "$-4\\sen(4x)$",
+        "categoria": "Cálculo Diferencial",
+        "subcategoria": "Derivadas",
+        "tema": "Trigonométricas"
+    },
+    "Cálculo Diferencial:Derivadas:Trigonométricas:003": {
+        "enunciado": "Deriva $\\tan(\\pi\\theta)$",
+        "solucion": "Usa la fórmula $D(\\tan(u))=\\sec^2(u)\\,du$.",
+        "respuesta": "$\\pi\\sec^2(\\pi\\theta)$",
+        "categoria": "Cálculo Diferencial",
+        "subcategoria": "Derivadas",
+        "tema": "Trigonométricas"
+    },
+    "Cálculo Diferencial:Derivadas:Trigonométricas:004": {
+        "enunciado": "Encuentra la recta tangente a $f(x)=\\cos(x)$ en $x=\\frac{\\pi}{2}$.",
+        "solucion": "",
+        "respuesta": "$y=\\frac{\\pi}2-x$",
+        "categoria": "Cálculo Diferencial",
+        "subcategoria": "Derivadas",
+        "tema": "Trigonométricas"
+    }
+}
