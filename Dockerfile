@@ -32,4 +32,4 @@ RUN python -c "import distutils; print('distutils OK')" && \
 EXPOSE 8000
 
 # Comando para ejecutar la aplicación
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8000"]
+CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:${PORT} --workers=1"]
