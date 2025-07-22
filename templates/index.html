@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestor de Problemas Matemáticos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-4">
+        <h1 class="mb-4">Sistema de Gestión de Problemas Matemáticos</h1>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Estadísticas</h5>
+                <ul>
+                    <li>Problemas en la base: {{ stats.total_problemas }}</li>
+                    <li>Problemas seleccionados: {{ stats.seleccionados }}</li>
+                    <li>Categorías: {{ stats.categorias }}, Subcategorías: {{ stats.subcategorias }}, Temas: {{ stats.temas }}</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="d-grid gap-3">
+            <a href="/agregar_problema" class="btn btn-primary btn-lg">Agregar Nuevo Problema</a>
+            <a href="/seleccionar_problemas" class="btn btn-success btn-lg">Seleccionar Problemas</a>
+            <a href="/exportar_base" class="btn btn-info btn-lg">Exportar Base de Datos</a>
+            
+            <form method="post" action="/importar_base" enctype="multipart/form-data" class="mt-3">
+                <div class="mb-3">
+                    <label class="form-label">Importar Base de Datos</label>
+                    <input type="file" class="form-control" name="file" accept=".json">
+                </div>
+                <button type="submit" class="btn btn-warning">Importar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
