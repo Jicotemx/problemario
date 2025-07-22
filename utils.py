@@ -68,3 +68,40 @@ class MathProblemManager:
 
     # Mantén aquí el resto de las funciones (agregar_problema, editar_problema, etc.)
     # ... [El resto de tu código original de la clase MathProblemManager] ...
+
+# Agrega esto al final de utils.py
+class PrintOptionsDialog:
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.title("Opciones de Impresión")
+        self.geometry("300x200")
+        self.resizable(False, False)
+        self.result = None
+        
+        main_frame = ttk.Frame(self)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+        
+        ttk.Label(main_frame, text="Seleccione qué desea incluir:").pack(pady=10)
+        
+        self.include_soluciones = tk.BooleanVar(value=True)
+        self.include_respuestas = tk.BooleanVar(value=True)
+        
+        ttk.Checkbutton(main_frame, text="Incluir soluciones (procedimientos)", 
+                       variable=self.include_soluciones).pack(anchor=tk.W, pady=5)
+        ttk.Checkbutton(main_frame, text="Incluir respuestas", 
+                       variable=self.include_respuestas).pack(anchor=tk.W, pady=5)
+        
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(pady=15)
+        
+        ttk.Button(btn_frame, text="Aceptar", command=self.aceptar).pack(side=tk.LEFT, padx=5)
+        ttk.Button(btn_frame, text="Cancelar", command=self.destroy).pack(side=tk.LEFT, padx=5)
+    
+    def aceptar(self):
+        self.result = {
+            'include_soluciones': self.include_soluciones.get(),
+            'include_respuestas': self.include_respuestas.get()
+        }
+        self.destroy()
+
+
