@@ -13,6 +13,16 @@ import io
 
 import sys
 import subprocess
+import setuptools
+
+@app.route('/check')
+def check():
+    return f"""
+    Setuptools version: {setuptools.__version__}<br>
+    Python version: {sys.version}
+    """
+
+
 
 # Verificar e instalar dependencias faltantes
 try:
