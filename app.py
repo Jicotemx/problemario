@@ -15,6 +15,13 @@ import sys
 import subprocess
 import setuptools
 
+import logging
+logging.basicConfig(level=logging.INFO)
+
+@app.before_first_request
+def startup():
+    app.logger.info("Aplicación iniciada correctamente")
+    app.logger.info(f"Versión de Flask: {flask.__version__}")
 
 @app.route('/healthz')
 def health_check():
